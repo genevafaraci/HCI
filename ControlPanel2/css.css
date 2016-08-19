@@ -1,0 +1,244 @@
+/*General Styling*/
+body{
+    /* I choose this font b/c of the simple lines, it is not overly cluncky or heavy*/
+    font-family: 'Josefin Sans', sans-serif;
+    font: 'Josefin Sans';
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+/*Map*/
+img#map{
+    display: inline-block;
+    height: auto;
+    width:500px;
+}
+
+/*Tab and Interface Styling*/
+#interface{
+    float: left;
+    margin-left: 0px;
+}
+ul#tabs {
+    list-style-type: none; 
+    margin: 30px 0 0 0; 
+    padding: 0 0 0.3em 0; 
+}
+ul#tabs li {
+    display: inline;
+}
+ul#tabs li a { 
+    color: #42454a; 
+    background-color: #dedbde; 
+    border: 1px solid #CFE2F3; /*This color is directly pulled from the room design, continuing the soft edges*/ 
+    border-bottom: none; 
+    padding: 0.3em; 
+    text-decoration: none; 
+    font-size: 18px;
+    font-weight: 700;
+    border-radius:10px 10px 0px 0px;
+}
+ul#tabs li a:hover { 
+    background-color: #f1f0ee; 
+}
+li.current{ 
+    color: #000; 
+    background-color: #797779; 
+    font-weight: bold; 
+    padding: 0.8em 0.4em 0.38em 0.4em;
+    border-radius:10px 10px 0px 0px;
+}
+
+div.tabContent { 
+    border: 1px solid #CFE2F3;
+    padding: 10px; 
+    width:450px;
+    background-color: #f1f0ee; 
+    display: none;
+    border-radius:0px 10px 10px 10px;
+}
+div.tabContent.current{
+    display: inline-block;
+}
+
+/*Window Styling*/
+#windowTitle{
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 10px;
+    font-weight: 600;
+}
+#windowLabels{
+    font-size: 13px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    /*These labels, while important to understanding the system do not have to be as big as those that label each window*/
+}
+#open{
+    padding-left: 125px;
+}
+#half{
+    padding-left: 90px;
+    padding-right: 100px;
+}
+
+input.windowSlider{
+    -webkit-appearance: none;
+    width: 325px;
+    border-radius: 10px;
+    float: right;
+} 
+input.windowSlider::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #ecf0f1;
+	border: 1px solid #bdc3c7;
+	width: 20px;
+	height: 25px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+.windowContent{
+    height: 325px;
+}
+
+/*Door Styling*/
+#doorTitle{
+    text-align: center;
+    font-weight: 600;
+}
+.label{
+    padding-right: 20px;
+    padding-top: 35px;
+}
+.door{
+    position: relative;
+    padding-left: 170px;
+}
+.doorLabel{
+    text-align: right;
+}
+img.locks.alldoors{
+    padding-left: 20px;
+}
+.door1{
+    padding-left: 37px;
+}
+.door2{
+    padding-left: 33px;
+}
+img.locks{
+    height: 35px;
+    width: 26px;
+    cursor: pointer;
+}
+
+/*Light Styling*/
+#lightTitle{
+    text-align: center;
+    font-weight: 600;
+}
+input.lightBulb{
+    -webkit-appearance: none;
+    width: 250px;
+    border-radius: 10px;
+    background: -webkit-linear-gradient(left,yellow, white);
+    background: -o-linear-gradient(right,white, yellow);
+    background: -moz-linear-gradient(right,white, yellow);
+    background: linear-gradient(to right,white, yellow); 
+} 
+#masterSlider{
+    display: inline-block;
+    position: relative;
+    padding-left: 31px;
+    padding-top: 10px;
+}
+#lightsSlider1{
+    display: inline-block;
+    position: relative;
+    padding-left: 80px;
+    padding-top: 10px;
+}
+#lightsSlider2{
+    display: inline-block;
+    position: relative;
+    padding-left: 76px;
+    padding-top: 10px;
+}
+#lightsSlider3{
+    display: inline-block;
+    position: relative;
+    padding-left: 77px;
+    padding-top: 10px;
+}
+
+#lightsSlider4{
+    display: inline-block;
+    position: relative;
+    padding-left: 76px;
+    padding-top: 10px;
+}
+#lightsSlider5{
+    display: inline-block;
+    position: relative;
+    padding-left: 77px;
+    padding-top: 10px;
+}
+#lightsSlider6{
+    display: inline-block;
+    position: relative;
+    padding-left: 76px;
+    padding-top: 10px;
+}
+input.lightBulb::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #ecf0f1;
+	border: 1px solid #bdc3c7;
+	width: 20px;
+	height: 25px;
+	border-radius: 10px;
+	cursor: pointer;
+}
+img.lights{
+    cursor: pointer; /* to make the images appear/act like buttons, so the user is hinted of the affordances*/
+}
+
+/*Heating Styling*/
+#heating
+{
+    height: 169px;
+}
+#heatTitle{
+    text-align: center;
+    font-weight: 600;
+}
+input.heat{
+    -webkit-appearance: none;
+    width: 200px;
+    border-radius: 10px; /* made the same radius as the the slider iteself so users would understand that they are at the end of the range, if they saw a little bit of a gap it may seem they are not at the end of the spectrum*/
+    background: -webkit-linear-gradient(left,blue, red);
+    background: -o-linear-gradient(right,blue, red);
+    background: -moz-linear-gradient(right,blue, red);
+    background: linear-gradient(to right,blue, red); 
+}
+#heatRange{
+    position: fixed;
+    left:110px;   
+}
+
+#setTemp{
+    text-align: center;
+}
+input.heat::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: #ecf0f1;
+	border: 1px solid #bdc3c7;
+	width: 20px;
+	height: 25px;
+	border-radius: 10px;
+	cursor: pointer;
+}

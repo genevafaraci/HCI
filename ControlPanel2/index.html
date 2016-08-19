@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="utf-8">
+        <Title>Control Room</Title>
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,300italic,700" rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="css.css">
+        <script src="jquery-2.2.0.js"></script>
+        <script src="js.js"></script>
+        
+        
+    </head>
+    
+    <body>
+        <div id="interface">
+            <ul id="tabs">
+                <li class="tabLink current" data-tab="windows"><a href="#windows">Windows</a></li>
+                <li class="tabLink" data-tab="doors"><a href="#doors">Doors</a></li>
+                <li class="tabLink" data-tab="lights"><a href="#lights">Lights</a></li>
+                <li class="tabLink" data-tab="heating"><a href="#heating">Heating</a></li>
+            </ul>
+            <div class="tabContent current" id="windows">
+                <form action="" class="windowContent">
+                    <div id="windowTitle"> Window Blind Levels</div>
+                    <div id="windowLabels">
+                        <span id="open">Opened</span>
+                        <span id="half">Halfway</span>
+                        <span id="close">Closed</span>
+                    </div>
+                    <span class="label">All Windows</span>
+                    <input type="range" name="ALLwindows" class="windowSlider AllWindows" value="2" min="0" max="2">
+                    <br>
+                     <br>
+                     <br>
+                    
+                    <span class="label">Window 1</span>
+                    <input type="range" name="window1" class="windowSlider window1" value="2" min="0" max="2">
+                    <br>
+                     <br>
+                     <br>
+                    
+                    <span class="label">Window 2</span>
+                    <input type="range" name="window2" class="windowSlider window2" value="2" min="0" max="2">
+                    <br>
+                    <br>
+                     <br>
+                    
+                    <span class="label">Window 3</span>
+                    <input type="range" name="window3" class="windowSlider window3" value="2" min="0" max="2">
+                    <br>
+                     <br>
+                     <br>
+                    <span class="label">Window 4</span>
+                    <input type="range" name="window4" class="windowSlider window4" value="2" min="0" max="2">
+                </form>
+            </div>
+            <div class="tabContent" id="doors">
+                <!--In each tab is the same image of the room, but the difference is in each version different things are lighted. Only labbeling the information needed for the user to interact with those set of controls.-->
+                <p id="doorTitle">Door Locks</p>
+                <div class="door alldoors">
+                    <span class="doorLabel">All Doors</span>
+                    <img class="locks alldoors" src="lock.png">
+                </div>
+                <div class="door">
+                    <span class="doorLabel" >Door 1</span>
+                    <img class="locks door1" src="lock.png">
+                </div>
+                <div class="door">
+                    <span class="doorLabel">Door 2</span>
+                    <img class="locks door2" src="lock.png">
+                </div>
+            </div>
+            <div class="tabContent" id="lights">
+                <form action="">
+                    <p id="lightTitle">Light Levels</p>
+                    <span class="masterswitch">Master Switch</span>
+                    <div id="masterSlider">   
+                        <img class="lights masterswitch" src="lightOFF.png">
+                        <input type="range" name="lightALL" class="lightBulb lightALL" value="0" min="0" max="40">
+                        <img class="lights masterswitch lightON" src="lightON.png">
+                    </div>
+                    
+                    <br>
+                    <br>
+                    
+                    <span>Light 1</span>
+                    <div id="lightsSlider1">
+                        <img class="lights light1" src="lightOFF.png">
+                    <input type="range" name="light1" class="lightBulb light1" value="0" min="0" max="40">
+                    <img class="lights light1 lightON" src="lightON.png">
+                    </div>
+                    
+                    <br>
+                    <br>
+                    
+                    <span>Light 2</span>
+                    <div id="lightsSlider2">
+                        <img class="lights light2" src="lightOFF.png">
+                        <input type="range" name="light2" class="lightBulb light2"value="0" min="0" max="40">
+                        <img class="lights light2 lightON" src="lightON.png">
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <span>Light 3</span>
+                    <div id="lightsSlider3">
+                        <img class="lights light3" src="lightOFF.png">
+                        <input type="range" name="light3" class="lightBulb light3"value="0" min="0" max="40">
+                        <img class="lights light3 lightON" src="lightON.png">
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <span>Light 4</span>
+                    <div id="lightsSlider4">
+                        <img class="lights light4" src="lightOFF.png">
+                        <input type="range" name="light4" class="lightBulb light4" value="0" min="0" max="40">
+                        <img class="lights light4 lightON" src="lightON.png">
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <span>Light 5</span>
+                    <div id="lightsSlider5">
+                        <img class="lights light5" src="lightOFF.png">
+                        <input type="range" name="light5" class="lightBulb light5" value="0" min="0" max="40">
+                        <img class="lights light5 lightON" src="lightON.png">
+                    </div>
+                    <br>
+                    <br>
+                    
+                    <span>Light 6</span>
+                    <div id="lightsSlider6">
+                        <img class="lights light6" src="lightOFF.png">
+                        <input type="range" name="light6" class="lightBulb light6" value="0" min="0" max="40">
+                        <img class="lights light6 lightON" src="lightON.png">
+                    </div>
+
+                </form>
+            </div>
+            <div class="tabContent" id="heating">
+                <p id="heatTitle">Heating and Cooling</p>
+                <div>
+                    <form oninput="amount.value=heat.value" id="heatRange">
+                        <span>55&#8457;</span>
+                        <input type="range" name="heat" class="heat" value="65" min="50" max="100">
+                        <span>100&#8457;</span>
+                        <div id="setTemp"> 
+                            <br>
+                            Set Temperature:
+                         <output name="amount" for="heat" id="heatValue">65</output> &#8457;
+                        </div>
+                       
+                    </form>
+                </div>
+                
+            </div>
+        </div>
+        <div>
+            <img src="roomDesign.png" id=map>
+        </div>
+    </body>
+</html>
